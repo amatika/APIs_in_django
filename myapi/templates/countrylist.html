@@ -1,0 +1,33 @@
+<!-- countryapp/templates/countryapp/country_list.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Country List</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Country List</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Capital</th>
+                    <th>Population</th>
+                    <th>Sub Region</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for country in countries %}
+                <tr>
+                    <td>{{ country.name.common }}</td>
+                    <td>{{ country.capital }}</td>
+                    <td>{{ country.population }}</td>
+                    <td>{{ country.subregion }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
